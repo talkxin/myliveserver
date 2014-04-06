@@ -1,0 +1,266 @@
+/* CSS Document */
+html{color:#444;background:#FFF;font:12px/21px Arial, Helvetica, sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;font:12px/21px Arial, Helvetica, sans-serif;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:400;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-weight:inherit;font-size:100%;}
+legend{color:#000;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+.l{float:left}
+.r{float:right;}
+
+/*a*/
+a{color:#444; text-decoration:none;}
+a:hover{color:#c92323; text-decoration:none;}
+
+.nav,.logo_box,.ads,.ads2_box,.explain_box{width:970px; margin:0 auto;}
+
+/*margin-bottom*/
+.ads2_box,.explain_box{margin-bottom:10px;}
+
+/*bg*/
+.nav_box,.all_btn small,.all_btn:hover small,.letv_active,.letv,.music,.m_web,.right_arrow,.left_arrow,.atten_sina i,.partner_title,.m_web_active,.music_active{background:url(http://i2.letvimg.com/img/201204/18/sitedown/app_bg.png) no-repeat;}
+.search .input_text,.search .input_btn{background:url(http://i2.letvimg.com/img/201204/18/sitedown/search_bg.png) no-repeat;border:none;}
+/*nav*/
+/*
+.nav_box{height:37px;line-height:34px; background-repeat:repeat-x;}
+.nav span,.model_platform span{padding:0 6px;color:#ccc;}
+.all_btn{padding:0 6px;z-index:55;}
+.all_btn.h{background:#fff;border:1px #ccc solid;border-bottom:none;padding:0px 6px;z-index:55;}
+.all_btn small{background-position:4px -268px;padding:0px 6px;z-index:55;}
+.all_btn small.h{background-position:-8px -268px;padding:0px 6px;position:relative;z-index:55;border-bottom:none;}
+.otherbox{ position:absolute; border:1px solid #DEDEDE;background:#fff; top:28px; text-align:center; padding:0 10px;_width:50px;z-index:52;}
+.otherbox ul li{height:32px;line-height:32px;border-bottom:1px solid #DEDEDE;}
+.nav_r{position:relative;}
+*/
+/* 
+.lookedbox{background:#FFFFFF; border: 1px solid #DEDEDE;display: block;overflow: hidden;position: absolute;right: 8px;top: 29px;width: 245px;z-index: 12;left:-67px;top:35px;}
+.noRec dt {height: 52px;line-height: 52px;text-align: center;}
+.noRec dd {background: #F2F2F2;color: #999999;line-height: 22px;padding: 0 15px;}
+.noRec dd.tit {padding-left: 8px;padding-top: 5px;}
+.noRec dd.tip {padding: 10px 0;}
+.noRec dd.tip p {border-top: 1px solid #DFDFDF;margin: 0 10px;padding: 5px 0 0;}
+.newRecUl i{background:url(http://i0.letvimg.com/img/201204/18/sitedown/arrow.png) no-repeat -6px 12px;;width:25px;margin:0 0 0 2px;display:inline-block}
+.opc {border-top: 1px solid #DEDEDE;height: 20px;line-height:20px;margin-top: -2px;padding: 5px 6px;}
+.opc .clear,.opc .all{background:url(http://i3.letvimg.com/img/201204/18/sitedown/del_look.png) no-repeat 0 3px;padding-left:15px;}
+.opc .all{background-position:0 -15px;}
+*/
+.search{margin:6px 0 0 10px;}
+.search .input_text{width:146px;height:21px; line-height:21px; text-indent:5px;color:#444;background-position:top left;float:left;}
+.search .input_btn{width:46px;height:21px; background-position:top right; cursor:pointer;margin-left:5px;float:left;}
+
+/*logo box*/
+.logo_box{padding:15px 0;}
+.channel a{display:inline-block;width:108px;height:40px;margin-top:3px;margin-left:5px;}
+.letv{background-position:-218px -37px;}
+.letv:hover{background-position:-109px -37px;}
+.letv_active{background-position:0 -37px;}
+.music{background-position:-218px -78px;}
+.music_active{background-position:0px -78px;}
+.music:hover{background-position:-109px -78px;}
+.m_web{background-position:-218px -118px;}
+.m_web_active{background-position:0px -118px;}
+.m_web:hover{background-position:-109px -118px;}
+
+/*ads_box*/
+.ads_box{padding:0 5px 0;margin-bottom:10px;}
+
+/*model_box*/
+
+.model_topbox .hd ul li.on{ background:#f00;  } 
+.model_box,.web_mobile_box{width:968px;margin:0 auto 10px;border:1px #D2D2D2 solid;}
+.model_topbox{border:1px #fff solid;background:#eeeeee;height:40px;line-height:40px;font-size:14px;}
+.model_topbox{ overflow:hidden; position:relative;} 
+.model_topbox .hd{ overflow:hidden;  height:30px;   } 
+.model_topbox .hd .prev,.model_topbox .hd .next{ display:block;  width:5px; height:9px; line-height:10px; float:right; margin-right:10px; margin-top:15px;
+overflow:hidden;cursor:pointer; background:url("http://i2.letvimg.com/img/201209/19/sitedown/icoLeft.png") no-repeat;} 
+.model_topbox .hd .next{ background:url("http://i3.letvimg.com/img/201209/19/sitedown/icoRight.png") no-repeat;  } 
+.model_topbox .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:15px;  } 
+.model_topbox .hd ul li{ position:relative; _display:inline; float:left;  width:10px; height:10px; overflow:hidden; background:#CCCCCC; margin-right:10px; text-indent:-999px; cursor:pointer;
+-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
+.model_type{margin-left:15px;_margin-left:7px;padding-left:25px;_padding-top:10px;background:url(http://i3.letvimg.com/img/201204/18/sitedown/mobile_icon.png) no-repeat left 5px;}
+.model_platform{margin-right:15px;line-height:40px;font-size:14px; text-indent:10px;}
+.model_platform strong{color:#000;font-size:15px;font-weight: bold;}
+.model_platform a:hover{color:#0892dd;font-weight: bold;font-size:13px;}
+.mpa {color:#6C6C6C;padding: 9px 10px;}
+.model_platform .active{color:#0892dd;font-weight: bold;font-size:13px;}
+
+.left_arrow{width:40px;height:55px;background-position:-235px -162px; display:block;float:left;margin:60px 0 0 15px;_margin:60px 0 0 7px;}
+.left_arrow:hover{width:40px;height:55px;background-position:-280px -162px;}
+.right_arrow{width:40px;height:55px;background-position:-235px -217px; display:block;float:right;margin:60px 15px 0 0;_margin:60px 7px 0 0;}
+.right_arrow:hover{background-position:-280px -217px;}
+.phone_list{width:850px;margin:15px 0;float:left;}
+.phone_list a{display:block;}
+.phone_list li{text-align:center;float:left;padding:0 15px 0 15px;_padding:0 12px}
+
+/*ads2*/
+.ads_no1,.ads_no2{margin-right:12px;}
+.ads2_box a{display:block; float:left;}
+
+/*explain*/
+.explain_box{padding:15px;width:940px; border:1px solid #D4D4D4; }
+.explain{background:url(http://i3.letvimg.com/img/201204/18/sitedown/explain_betweenline.jpg) top center repeat-y;}
+.explain_l,.explain_r{width:420px;}
+.explain_l h3,.explain_r h3{width:260px;height:20px;color:#cb0101;font-size:14px;font-weight:600;}
+.more{font-size:14px;float:right;}
+.explain_l h4{font-size:14px; font-weight:bold;color:#333;padding-top:10px;border-top:1px solid #d9d9d9;}
+.explain_l p{padding:2px 0 10px; line-height:20px;border-bottom:1px solid #fff;}
+.explain_l .first h4,.explain_l .last p{border:none;}
+.explain_r h4{font-size:14px; font-weight:bold;color:#333;padding-top:10px;}
+.explain_r li p{padding:5px 0 0px; line-height:20px;}
+.atten_sina{background:#EEEEEE; border-radius:5px;padding:10px;margin-top:10px;}
+.atten_sina i{width:205px;height:30px;display:inline-block;background-position:0 -230px;margin-right:10px;}
+.atten_sina p{font-size:14px;padding-top:10px;}
+
+/*partner*/
+.partner_title{width:204px;height:25px;background-position:0 -203px;margin:8px 0 0 15px;}
+.partner_list{padding-bottom:20px;}
+.partner_list li{float:left;width:100px;margin:10px 2px 5px 16px;}
+.partner_list li a{}
+.partner_list li img{width:100px;height:60px;border:1px #dddddd solid;}
+.partner_list .special{color:#CB0101;}
+.partner_list .txt{width:100px;height:20px;margin:0;overflow:hidden;padding:0px;float:left;vertical-align:middle;text-align:center;}
+.partner_txtlist{padding:10px 0 10px;}
+.partner_txtlist .special{color:#CB0101;}
+.partner_txtlist dd{width:100px;height:20px;margin:0;overflow:hidden;padding:0;float:left;margin:0 2px 0 16px;}
+
+/*footer*/
+.footer{ text-align:center;}
+.footer p{line-height:24px;color:#666;}
+.footer a{color:#666;}
+.footer span{padding:0 6px;}
+
+
+/*model_download*/
+#model_download div:last-child{border-bottom:none;}
+.model_download{padding:15px 0;border-bottom:1px #d4d4d4 solid;}
+.model_download .down_l{width:550px;padding:0 0 0 30px;float:left;}
+.mobile_type{float:left;width:100px;padding-top:30px;}
+.mobile_txt{float:left;width:400px;}
+.mobile_txt h3{font-size:14px;font-weight:bold;line-height:30px;}
+.mobile_txt .btn_a,.btn_a a{padding:5px 0;color:#c92323;}
+.down_r{float:right;width:350px;margin-top:5px;}
+
+.down_r .dimension{text-align:center;}
+.dimension img{border:1px #ccc solid;width:100px;height:100px;}
+.down_r .stepstyle1{margin-left:95px;}
+.down_r .stepstyle1 li{margin:5px 5px 0;}
+.down_r .stepstyle2{margin-left:25px;}
+.down_r .stepstyle2 li{margin:5px 5px 0;float:left;}
+/*
+.down_r ul{margin-left:15px;}
+.down_r li{float:left;margin:5px 5px 0;}
+*/
+
+
+/*trait*/
+.title_trait,.title_center,.title_partner{
+/*background:url(http://i2.letvimg.com/img/201204/20/sitedown20120420/title.png) no-repeat;
+text-indent:-9999px;*/
+ font-size: 20px;
+ font-weight: bold;
+width:500px;height:24px;margin:8px 0 0 15px;_overflow:hidden;}
+.title_center{background-position:0 -28px;}
+.title_partner{background-position:0 -56px;}
+
+.model_con div:last-child{border-bottom:none;}
+.txt_con{padding:20px 18px 18px; line-height:24px;border-bottom:1px #ccc dotted;}
+.txt_con h3{font-size:14px;font-weight:bold;color:#333;padding-bottom:5px;}
+.partner_center li{margin-bottom:10px; text-align:center;}
+
+
+/* qqshop focus */
+#focus {width:970px; height:320px; overflow:hidden; position:relative;}
+#focus ul {height:380px; position:absolute;}
+#focus ul li {float:left; width:970px; height:320px; overflow:hidden; position:relative; background:#000;}
+#focus ul li div {position:absolute; overflow:hidden;}
+#focus .btnBg {position:absolute; width:970px; height:20px; left:0; bottom:0; background:#000;}
+#focus .btn_ads {position:absolute; width:950px; height:10px; padding:5px 10px; right:0; bottom:0; text-align:right;}
+#focus .btn_ads span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+#focus .btn_ads span.on {background:#fff;}
+#focus .preNext {width:45px; height:100px; position:absolute; top:90px; background:url(http://i2.letvimg.com/img/201204/18/sitedown/sprite.png) no-repeat 0 0; cursor:pointer;}
+#focus .pre {left:0;}
+#focus .next {right:0; background-position:right top;}
+
+/*mobile_web*/
+.web_l{padding:0px;width:45%;}
+.web_type{float:left;margin:20px 30px 20px 20px;}
+.web_txt{float:left;padding-top:30px;}
+.web_txt h3{font-size:25px;font-weight:bold;color:#333;padding-bottom:10px;}
+.web_txt p{line-height:28px;font-size:14px;padding-left:3px;}
+.web_mobile_box{background:url(http://i0.letvimg.com/img/201204/18/sitedown/between_line.png) 50% 7px no-repeat;}
+
+body{background:url(http://i0.letvimg.com/img/201207/06/bg_mobile.gif) repeat-x;background:url(http://i0.letvimg.com/img/201207/06/bg_mobile.gif) repeat-x!important;_background:url(http://i0.letvimg.com/img/201207/06/bg_mobile.gif) repeat-x;}
+
+/*logn
+
+#userlogin{float:right;height:28px;line-height:32px;position:relative;color:#ccc;}*/
+/*record 			
+#agkjl{float:right;width:96px; padding:0 8px 0 3px;}
+	.hisbox a,.hisbox a.a_on,.newRecUl li,.newRecUl i,.opc .all,.opc .clear,.clearBtn,.clearBtnHov{background:url(http://i3.letvimg.com/img/201112/06/top/recordbg.png) no-repeat;}
+	.hisbox{float:right;height:37px;color:#010101;width:96px;cursor:pointer;text-align:left;overflow:hidden;}
+	.hisbox a{padding:0;margin:0;cursor: pointer;width:94px;float:right;display:block;text-align:right;border:1px solid transparent;_border:0px solid #fff;border-bottom:none;background-position:5px -35px;*background-position:5px -34px!important;_background-position:5px -35px;margin-top:2px;overflow:hidden;height:27px;line-height:27px;}
+	.hisbox a:hover{text-decoration:none;}
+	.hisbox a.a_on{border:1px solid #ddd;background-color:#fff;background-position:5px -35px;position:relative;z-index:13;border-bottom:none;}
+	.hisbox small{background-position:-60px 7px;padding:5px;margin:0 3px 0 1px;}
+	.hisbox a.a_on small{ background-position: -96px 7px;}
+	.RecArea a,.opc a{color:#333;}
+	.RecArea a:hover,.opc a:hover{color:#c62323;}
+	
+	.lookedbox{background:#FFFFFF; border: 1px solid #DEDEDE;display: block;overflow: hidden;position: absolute;width:245px;z-index:12;top:28px;}
+	.newRecUl {padding:1px;}
+	.newRecUl li{border-bottom:1px dashed #e3e3e3;height:27px;line-height:27px;background-position:-155px 1px;float:left;overflow:hidden;width:100%; text-align:left;}
+	.newRecUl span,.newRecUl em,.newRecUl i{float:left;display:block;}
+	.newRecUl span{float:right;width:55px;color:#ccc;padding-right:5px; display:none;}
+	.newRecUl span.rent{text-align:right;color:#333;}
+	.newRecUl i{width:20px;font-style:normal;margin:0  0 0 2px;}
+	.newRecUl i.webIcon{background-position:-10px -66px;}
+	.newRecUl i.tvIcon{background-position:-75px -66px;}
+	.newRecUl i.macIcon{background-position:-46px -66px;}
+	.newRecUl li.active i.webIcon{background-position:4px -66px;}
+	.newRecUl li.active i.tvIcon{background-position:-100px -66px;}
+	.newRecUl li.active i.macIcon{background-position:-27px -66px;}
+	.newRecUl li.active span{ display:block;}
+	.newRecUl em{width:218px;font-style:normal;height:27px;overflow:hidden;white-space:nowrap;}
+	.newRecUl li.active em{width:155px;font-style:normal;}
+	.newRecUl .red a{color:#c62323;}
+	.opc{border-top:1px solid #dedede;margin-top:-2px;padding:5px 6px;height:20px;}
+	.opc .all{background-position:-130px -73px;padding-left:14px;}
+	.opc .clear{background-position:-237px -107px;padding-left:14px;}
+	.opc .fr input{vertical-align:text-top;}
+	.RecArea{ position:relative;}
+	.maskbox{opacity:0.9; filter:Alpha(opacity=90);width:100%;height:350px;background:#fff;position:absolute;left:0;top:0;}
+	.opcInfo{position:absolute;left:0;top:0;width:100%;}
+	.opcInfo p{text-align:center;padding-top:5px;}
+	.clearBtn,.clearBtnHov{background-position:-83px -105px;width:40px;height:20px;line-height:20px;border:none; text-align:center;margin:0 8px;}
+	.clearBtnHov{background-position:-27px -105px;}
+	.noRec dt{height:52px;line-height:52px; text-align:center}
+	.noRec dd{ background:#f2f2f2;line-height:22px;padding:0 15px;color:#999;}
+	.noRec dd.tit{padding-top:5px;padding-left:8px;}
+	.noRec dd.tip{padding:10px 0}
+	.noRec dd.tip p{border-top:1px solid #dfdfdf;margin:0px 10px;padding:5px 0 0;}
+	.getdata{padding:10px 20px; text-align:center;}
+	.getdata p{height:22px;line-height:22px;}
+	.smallLoad{padding-left:20px; background:url(http://i0.letvimg.com/img/201112/06/top/smallload.gif) no-repeat left -5px; font-size:12px;}
+	*/
+	
+.off{ display:block; zoom:1; overflow:hidden; width:60px; height:20px; position:absolute; right:-286px; top:-67px;}
+.delete{ float:right; display:block; background-position:-68px -69px; width:12px; height:12px; cursor:pointer; margin:8px 8px 0 0;}
+.Adweibo{border: 1px solid #D2D2D2;width: 970px;margin: 10px auto 0 auto;height:155px;background:#fff;overflow:hidden;}
+
+.acResults {background-color:#fff;border: 1px solid #DDDDDD;overflow: hidden;padding: 0;z-index: 9999;}
+.acResults li {cursor: pointer;font: menu;font-size: 12px;margin: 0;overflow: hidden;padding: 2px 7px;}
+.acSelect {background-color: highlight;color: highlighttext;}	

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+	<!-- <properties resource="DBConnection.properties" /> <transactionManager 
+		type="JDBC"> <dataSource type="SIMPLE"> <property name="JDBC.Driver" value="${play.bj1.data.driverClassName}" 
+		/> <property name="JDBC.ConnectionURL" value="${play.bj1.data.url}" /> <property 
+		name="JDBC.Username" value="${play.bj1.data.username}" /> <property name="JDBC.Password" 
+		value="${play.bj1.data.password}" /> </dataSource> </transactionManager> -->
+
+	<!-- 权限 -->
+	<sqlMap resource="/com/mylive/authenticate/dao/impl/AuthMenuDaoSql.xml" />
+	<sqlMap resource="/com/mylive/authenticate/dao/impl/AuthRoleDAOSql.xml" />
+	<sqlMap resource="/com/mylive/authenticate/dao/impl/AuthRoleVsMenuDAOSql.xml" />
+	<sqlMap resource="/com/mylive/authenticate/dao/impl/AuthUserDAOSql.xml" />
+</sqlMapConfig>

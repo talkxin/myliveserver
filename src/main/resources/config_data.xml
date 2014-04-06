@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<domainName>
+		<!--<domainUrl>http://211.143.166.98:20201/peakweb</domainUrl> -->
+		<domainUrl>http://127.0.0.1:8080</domainUrl>
+		<!--<domainMainPage>http://211.143.166.98:20201/peakweb/main.do </domainMainPage> -->
+		<domainMainPage>http://127.0.0.1:8080/main.do</domainMainPage>
+	</domainName>
+	<releasePath>
+		http://127.0.0.1:8080/mylive/home.do?mid=
+	</releasePath>
+	<!-- http://211.143.166.98:20201/peakweb/home.do?mid= -->
+</config>

@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+.head_box a,.SiteMap a,.foot,.foot a{ font-family:"宋体";}
+.proWarp{padding-top:30px;font-family:"微软雅黑";}
+.proMain{width:970px; background:#fff;border:1px solid #ececec;margin:0 auto 0;padding-bottom:15px;border-bottom:none;}
+.proHead{padding:15px;color:#e6e6e6;}
+.proHead h1,.proHead h2{ display:inline-block;color:#333;}
+.proHead h1,.proHead h2,.proHead span{display:inline-block;float:left;}
+.proHead span{width:2px;padding-top:9px;}
+.proHead h1{ font-size:24px;font-weight:normal;padding-right:30px;width:170px;height:35px;line-height:35px;}
+.proHead h2{font-size:14px;padding:0 13px;font-weight:normal;width:80px; text-align:center;height:35px;line-height:35px;border-top: 3px solid #fff;}
+.proHead h2.active,.proHead h2:hover{  border-top: 3px solid #00A0E9;font-weight: bold;}
+.proHead h3{float:right;font-weight:normal;font-size:12px;margin-top:5px;font-family:"微软雅黑";}
+.h2box{height:35px;_height:36px;overflow:hidden;}
+.proNav h3{border-bottom: 1px solid #EBEBEB;border-top: 1px solid #EBEBEB;height: 33px;line-height: 33px;font-size:12px;font-weight:normal;padding:0 15px;background:#f7f7f7;}
+.proHead h2.h2Oth{width:120px;margin-left:18px;}
+
+.movNav{float:left;border-left:1px solid #ebebeb;background:#f7f7f7;height:33px;_margin-bottom:-1px;position:relative;}
+.movNav span{display:inline-block;float:left;padding:0 20px;border:1px solid #ebebeb; margin-left:-1px;height:33px;line-height:33px;border-top:none;}
+.movNav span.active{font-weight:bold;background:#fff;border-bottom:1px solid #fff;box-shadow: 3px 3px 3px #ccc;}
+.blu{color:#2b83c1}
