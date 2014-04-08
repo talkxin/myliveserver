@@ -46,17 +46,18 @@ import com.baidu.inf.iis.bcs.request.ListObjectRequest;
 import com.baidu.inf.iis.bcs.request.PutObjectRequest;
 import com.baidu.inf.iis.bcs.request.PutSuperfileRequest;
 import com.baidu.inf.iis.bcs.response.BaiduBCSResponse;
+import com.mylive.common.GetProperties;
 
 @SuppressWarnings("unused")
 public class Sample {
 	private static final Log log = LogFactory.getLog(Sample.class);
 	// ----------------------------------------
-	static String host = "bcs.duapp.com";
-	static String accessKey = "auFiQbNHANvq0Q0p8jPiflCc";
-	static String secretKey = "Trr6XyIbG80LE4PTU5GfAQ9YYu6OE0bP";
-	static String bucket = "mylive";
+	static String host = GetProperties.getDefaultDevpModValue("baidu.api.bcsurl");
+	static String accessKey = GetProperties.getDefaultDevpModValue("baidu.api.apikay");
+	static String secretKey = GetProperties.getDefaultDevpModValue("baidu.api.secretkey");
+	static String bucket = GetProperties.getDefaultDevpModValue("baidu.api.bucketname");
 	// ----------------------------------------
-	static String object = "/first-object";
+	static String object = GetProperties.getDefaultDevpModValue("piaoju.imageurl");
 	static File destFile;// = new File("test");
 
 	/**
@@ -230,13 +231,13 @@ public class Sample {
 
 	public static void putObjectByInputStream(BaiduBCS baiduBCS)
 			throws FileNotFoundException {
-		File file = new File("D:\\115519o7yos2csc4udoutc.jpg");// createSampleFile();
+		File file = new File("D:\\未标题-1.jpg");// createSampleFile();
 		InputStream fileContent = new FileInputStream(file);
 		String name = "/" + file.getName();
 		ObjectMetadata objectMetadata = new ObjectMetadata();
 		objectMetadata.setContentType("image/jpeg");
 		objectMetadata.setContentLength(file.length());
-		PutObjectRequest request = new PutObjectRequest(bucket, name,
+		PutObjectRequest request = new PutObjectRequest(bucket, object+name,
 				fileContent, objectMetadata);
 		request.setAcl(X_BS_ACL.PublicRead);
 		ObjectMetadata result = baiduBCS.putObject(request).getResult();

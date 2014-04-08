@@ -15,7 +15,7 @@ import com.mylive.common.SHA1;
 public class WeChatAction extends BaseAction {
 
 	// 自定义 token
-	private String TOKEN = "11111111111";
+	private String TOKEN = "mylivewechattoken";
 
 	/**
 	 * 返回token值
