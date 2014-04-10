@@ -76,7 +76,7 @@ public class GetProperties {
 	 * @return
 	 */
 	public static String getDefaultDevpModValue(String key) {
-		return getValue(getValue("DevelopMode.properties", "play.app")
+		return getValue(getValue("DevelopMode.properties", "app.develop")
 				+ ".properties", key);
 	}
 

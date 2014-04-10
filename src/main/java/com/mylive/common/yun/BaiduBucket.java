@@ -1,4 +1,4 @@
-package com.mylive.action;
+package com.mylive.common.yun;
 
 /***************************************************************************
  * 
@@ -49,15 +49,20 @@ import com.baidu.inf.iis.bcs.response.BaiduBCSResponse;
 import com.mylive.common.GetProperties;
 
 @SuppressWarnings("unused")
-public class Sample {
-	private static final Log log = LogFactory.getLog(Sample.class);
+public class BaiduBucket {
+	private static final Log log = LogFactory.getLog(BaiduBucket.class);
 	// ----------------------------------------
-	static String host = GetProperties.getDefaultDevpModValue("baidu.api.bcsurl");
-	static String accessKey = GetProperties.getDefaultDevpModValue("baidu.api.apikay");
-	static String secretKey = GetProperties.getDefaultDevpModValue("baidu.api.secretkey");
-	static String bucket = GetProperties.getDefaultDevpModValue("baidu.api.bucketname");
+	static String host = GetProperties
+			.getDefaultDevpModValue("baidu.api.bcsurl");
+	static String accessKey = GetProperties
+			.getDefaultDevpModValue("baidu.api.apikay");
+	static String secretKey = GetProperties
+			.getDefaultDevpModValue("baidu.api.secretkey");
+	static String bucket = GetProperties
+			.getDefaultDevpModValue("baidu.api.bucketname");
 	// ----------------------------------------
-	static String object = GetProperties.getDefaultDevpModValue("piaoju.imageurl");
+	static String object = GetProperties
+			.getDefaultDevpModValue("piaoju.imageurl");
 	static File destFile;// = new File("test");
 
 	/**
@@ -83,7 +88,7 @@ public class Sample {
 			// listObject(baiduBCS);
 			// ------------object-------------
 			// putObjectByFile(baiduBCS);
-			putObjectByInputStream(baiduBCS);
+			// putObjectByInputStream(baiduBCS);
 			// getObjectWithDestFile(baiduBCS);
 			// putSuperfile(baiduBCS);
 			// deleteObject(baiduBCS);
@@ -231,13 +236,13 @@ public class Sample {
 
 	public static void putObjectByInputStream(BaiduBCS baiduBCS)
 			throws FileNotFoundException {
-		File file = new File("D:\\未标题-1.jpg");// createSampleFile();
+		File file = new File("D:\\11111.jpg");// createSampleFile();
 		InputStream fileContent = new FileInputStream(file);
 		String name = "/" + file.getName();
 		ObjectMetadata objectMetadata = new ObjectMetadata();
 		objectMetadata.setContentType("image/jpeg");
 		objectMetadata.setContentLength(file.length());
-		PutObjectRequest request = new PutObjectRequest(bucket, object+name,
+		PutObjectRequest request = new PutObjectRequest(bucket, object + name,
 				fileContent, objectMetadata);
 		request.setAcl(X_BS_ACL.PublicRead);
 		ObjectMetadata result = baiduBCS.putObject(request).getResult();
