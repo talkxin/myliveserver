@@ -7,5 +7,5 @@ package com.mylive.common.yun;
  * 
  */
 public enum YUNSpace {
-	DEFAULE, NANO, SEVENNIU, BAIDU, HUAWEI, WEIYUN, WEIPAN
+	DEFAULE, NANO, QINIU, BAIDU, HUAWEI, WEIYUN, WEIPAN
 }

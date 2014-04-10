@@ -67,6 +67,7 @@ public class NANOYUN implements YunFileDao {
 	 * @param json
 	 * @return
 	 */
+	@Deprecated
 	public JSONObject uploadFile(FileInputStream in, JSONObject json) {
 		return null;
 	}
@@ -77,6 +78,7 @@ public class NANOYUN implements YunFileDao {
 	 * @param obj
 	 * @return
 	 */
+	@Deprecated
 	public JSONObject uploadSuperfile(Object obj) {
 
 		return null;
@@ -118,6 +120,7 @@ public class NANOYUN implements YunFileDao {
 	 * @param json
 	 * @return
 	 */
+	@Deprecated
 	public String downloadFile(JSONObject json) {
 		return null;
 	}
@@ -154,6 +157,7 @@ public class NANOYUN implements YunFileDao {
 	 * @param json
 	 * @return
 	 */
+	@Deprecated
 	public Object getFileList(JSONObject json) {
 		return null;
 	}
@@ -216,10 +220,5 @@ public class NANOYUN implements YunFileDao {
 			e.printStackTrace();
 		}
 		return null;
-	}
-
-	public static void main(String[] args) {
-		NANOYUN n = new NANOYUN();
-		System.out.println(n.getSpaceUsage(null));
 	}
 }
