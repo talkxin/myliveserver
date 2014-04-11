@@ -28,6 +28,40 @@ public class NANOYUN implements YunFileDao {
 	private String secretkey = "1524f795c29f458a9a4e7e34c0f2b94e";
 
 	/**
+	 * 空构造方法
+	 */
+	public NANOYUN() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * 通过构造方法初始化全部参数
+	 * 
+	 * @param username
+	 * @param passwd
+	 * @param apikey
+	 * @param secretkey
+	 */
+	public NANOYUN(String username, String passwd, String apikey,
+			String secretkey) {
+		this.username = username;
+		this.passwd = passwd;
+		this.apikey = apikey;
+		this.secretkey = secretkey;
+	}
+
+	/**
+	 * 更换空间
+	 * 
+	 * @param username
+	 * @param passwd
+	 */
+	public NANOYUN(String username, String passwd) {
+		this.username = username;
+		this.passwd = passwd;
+	}
+
+	/**
 	 * 上传文件
 	 * 
 	 * @param in
