@@ -171,7 +171,7 @@ public class AuthenticateBOImpl implements AuthenticateBO {
 													+ menuModel.getMenuId()
 													+ ","
 													+ menuModel.getMenuType()
-													+ ",1);\"><img src=\"images//dtree//add.gif\"//></a>"));
+													+ ",1);\"><img src=\"images/dtree/add.gif\"//></a>"));
 						} else {
 							addMenuChild(
 									menuModel,
@@ -194,9 +194,9 @@ public class AuthenticateBOImpl implements AuthenticateBO {
 													+ menuModel.getMenuId()
 													+ ","
 													+ menuModel.getMenuType()
-													+ ",1);\"><img src=\"images//dtree//add.gif\"//></a>  <a href=\"#\" onclick=\"javascript:menu_del("
+													+ ",1);\"><img src=\"images/dtree/add.gif\"//></a>  <a href=\"#\" onclick=\"javascript:menu_del("
 													+ menuModel.getMenuId()
-													+ ");\"><img src=\"images//dtree//del.gif\"//></a>"));
+													+ ");\"><img src=\"images/dtree/del.gif\"//></a>"));
 						}
 
 					}
@@ -238,7 +238,7 @@ public class AuthenticateBOImpl implements AuthenticateBO {
 											+ sub.getMenuId()
 											+ ","
 											+ sub.getMenuType()
-											+ ",1);\"><img src=\"images//dtree//add.gif\"//></a>"));
+											+ ",1);\"><img src=\"images/dtree/add.gif\"//></a>"));
 				} else {
 					addMenuChild(
 							sub,
@@ -257,9 +257,9 @@ public class AuthenticateBOImpl implements AuthenticateBO {
 											+ sub.getMenuId()
 											+ ","
 											+ sub.getMenuType()
-											+ ",1);\"><img src=\"images//dtree//add.gif\"//></a> <a href=\"#\" onclick=\"javascript:menu_del("
+											+ ",1);\"><img src=\"images/dtree/add.gif\"//></a> <a href=\"#\" onclick=\"javascript:menu_del("
 											+ sub.getMenuId()
-											+ ");\"><img src=\"images//dtree//del.gif\"//></a>"));
+											+ ");\"><img src=\"images/dtree/del.gif\"//></a>"));
 				}
 
 			} else {
@@ -278,9 +278,8 @@ public class AuthenticateBOImpl implements AuthenticateBO {
 								false,
 								"<a href=\"#\" onclick=\"javascript:menu_del("
 										+ sub.getMenuId()
-										+ ");\"><img src=\"images//dtree//del.gif\"//></a>"));
+										+ ");\"><img src=\"images/dtree/del.gif\"//></a>"));
 			}
-
 		}
 	}
 
