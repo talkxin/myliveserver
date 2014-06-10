@@ -28,4 +28,13 @@ public interface LoginUserDao {
 	 * @throws SQLException
 	 */
 	public LoginUserDao loginUser(T_paybank_user l) throws SQLException;
+
+	/**
+	 * 修改用户
+	 * 
+	 * @param l
+	 * @return
+	 * @throws SQLException
+	 */
+	public boolean updateLoginUser(T_paybank_user l) throws SQLException;
 }
