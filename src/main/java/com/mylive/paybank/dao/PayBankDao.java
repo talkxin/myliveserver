@@ -1,6 +1,7 @@
 package com.mylive.paybank.dao;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import com.mylive.paybank.module.T_paybank_shouzhi;
 import com.mylive.paybank.module.T_paybank_zhichutype;
@@ -63,4 +64,24 @@ public interface PayBankDao {
 	 * @throws SQLException
 	 */
 	public boolean deleteShouzhi(T_paybank_shouzhi t) throws SQLException;
+
+	/**
+	 * 获取一个收支项
+	 * 
+	 * @param t
+	 * @return
+	 * @throws SQLException
+	 */
+	public T_paybank_shouzhi getOneShouzhi(T_paybank_shouzhi t)
+			throws SQLException;
+
+	/**
+	 * 获取收支列表
+	 * 
+	 * @param t
+	 * @return
+	 * @throws SQLException
+	 */
+	public List<T_paybank_shouzhi> getShouzhiList(T_paybank_shouzhi t)
+			throws SQLException;
 }
