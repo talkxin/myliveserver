@@ -3,11 +3,22 @@ package com.mylive.paybank.dao.impl;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.ibatis.sqlmap.client.SqlMapClient;
 import com.mylive.paybank.dao.PayBankDao;
 import com.mylive.paybank.module.T_paybank_shouzhi;
 import com.mylive.paybank.module.T_paybank_zhichutype;
 
 public class PayBankDaoImpl implements PayBankDao {
+	private SqlMapClient sqlMapClient;
+
+	public SqlMapClient getSqlMapClient() {
+		return sqlMapClient;
+	}
+
+	public void setSqlMapClient(SqlMapClient sqlMapClient) {
+		this.sqlMapClient = sqlMapClient;
+	}
+
 	/**
 	 * 保存支出类型
 	 * 
@@ -16,7 +27,8 @@ public class PayBankDaoImpl implements PayBankDao {
 	 */
 	public T_paybank_zhichutype insertZhichu(T_paybank_zhichutype t)
 			throws SQLException {
-		return null;
+		sqlMapClient.insert("insertZhichu", t);
+		return t;
 	}
 
 	/**
@@ -25,8 +37,8 @@ public class PayBankDaoImpl implements PayBankDao {
 	 * @param t
 	 * @return
 	 */
-	public boolean updateZhichu(T_paybank_zhichutype t) throws SQLException {
-		return false;
+	public Integer updateZhichu(T_paybank_zhichutype t) throws SQLException {
+		return sqlMapClient.update("updateZhichu", t);
 	}
 
 	/**
@@ -35,8 +47,8 @@ public class PayBankDaoImpl implements PayBankDao {
 	 * @param t
 	 * @return
 	 */
-	public boolean deleteZhichu(T_paybank_zhichutype t) throws SQLException {
-		return false;
+	public Integer deleteZhichu(T_paybank_zhichutype t) throws SQLException {
+		return sqlMapClient.delete("deleteZhichu", t);
 	}
 
 	/**
@@ -48,7 +60,8 @@ public class PayBankDaoImpl implements PayBankDao {
 	 */
 	public T_paybank_shouzhi insertShouzhi(T_paybank_shouzhi t)
 			throws SQLException {
-		return null;
+		sqlMapClient.insert("insertShouzhi", t);
+		return t;
 	}
 
 	/**
@@ -58,8 +71,8 @@ public class PayBankDaoImpl implements PayBankDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean updateShouzhi(T_paybank_shouzhi t) throws SQLException {
-		return false;
+	public Integer updateShouzhi(T_paybank_shouzhi t) throws SQLException {
+		return sqlMapClient.update("updateShouzhi", t);
 	}
 
 	/**
@@ -69,8 +82,8 @@ public class PayBankDaoImpl implements PayBankDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean deleteShouzhi(T_paybank_shouzhi t) throws SQLException {
-		return false;
+	public Integer deleteShouzhi(T_paybank_shouzhi t) throws SQLException {
+		return sqlMapClient.delete("deleteShouzhi", t);
 	}
 
 	/**
@@ -82,7 +95,8 @@ public class PayBankDaoImpl implements PayBankDao {
 	 */
 	public T_paybank_shouzhi getOneShouzhi(T_paybank_shouzhi t)
 			throws SQLException {
-		return null;
+		return (T_paybank_shouzhi) sqlMapClient.queryForObject("getOneShouzhi",
+				t);
 	}
 
 	/**
@@ -94,6 +108,6 @@ public class PayBankDaoImpl implements PayBankDao {
 	 */
 	public List<T_paybank_shouzhi> getShouzhiList(T_paybank_shouzhi t)
 			throws SQLException {
-		return null;
+		return sqlMapClient.queryForList("getShouzhiList", t);
 	}
 }

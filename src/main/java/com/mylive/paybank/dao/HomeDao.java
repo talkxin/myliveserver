@@ -28,7 +28,7 @@ public interface HomeDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean updateHome(T_paybank_home home) throws SQLException;
+	public Integer updateHome(T_paybank_home home) throws SQLException;
 
 	/**
 	 * 删除家庭
@@ -37,7 +37,7 @@ public interface HomeDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean deleteHome(T_paybank_home home) throws SQLException;
+	public Integer deleteHome(T_paybank_home home) throws SQLException;
 
 	/**
 	 * 添加家庭成员
@@ -56,7 +56,7 @@ public interface HomeDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean updateHomeUser(T_paybank_home_all all) throws SQLException;
+	public Integer updateHomeUser(T_paybank_home_all all) throws SQLException;
 
 	/**
 	 * 删除家庭成员
@@ -65,7 +65,7 @@ public interface HomeDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean deleteHomeUser(T_paybank_home_all all) throws SQLException;
+	public Integer deleteHomeUser(T_paybank_home_all all) throws SQLException;
 	
 	/**
 	 * 获取家庭创建信息

@@ -27,7 +27,7 @@ public interface PayBankDao {
 	 * @param t
 	 * @return
 	 */
-	public boolean updateZhichu(T_paybank_zhichutype t) throws SQLException;
+	public Integer updateZhichu(T_paybank_zhichutype t) throws SQLException;
 
 	/**
 	 * 删除支出类型
@@ -35,7 +35,7 @@ public interface PayBankDao {
 	 * @param t
 	 * @return
 	 */
-	public boolean deleteZhichu(T_paybank_zhichutype t) throws SQLException;
+	public Integer deleteZhichu(T_paybank_zhichutype t) throws SQLException;
 
 	/**
 	 * 保存收支
@@ -54,7 +54,7 @@ public interface PayBankDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean updateShouzhi(T_paybank_shouzhi t) throws SQLException;
+	public Integer updateShouzhi(T_paybank_shouzhi t) throws SQLException;
 
 	/**
 	 * 删除收支
@@ -63,7 +63,7 @@ public interface PayBankDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean deleteShouzhi(T_paybank_shouzhi t) throws SQLException;
+	public Integer deleteShouzhi(T_paybank_shouzhi t) throws SQLException;
 
 	/**
 	 * 获取一个收支项

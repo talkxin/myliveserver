@@ -3,11 +3,22 @@ package com.mylive.paybank.dao.impl;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.ibatis.sqlmap.client.SqlMapClient;
 import com.mylive.paybank.dao.HomeDao;
 import com.mylive.paybank.module.T_paybank_home;
 import com.mylive.paybank.module.T_paybank_home_all;
 
 public class HomeDaoImpl implements HomeDao {
+	private SqlMapClient sqlMapClient;
+
+	public SqlMapClient getSqlMapClient() {
+		return sqlMapClient;
+	}
+
+	public void setSqlMapClient(SqlMapClient sqlMapClient) {
+		this.sqlMapClient = sqlMapClient;
+	}
+
 	/**
 	 * 添加家庭
 	 * 
@@ -16,7 +27,8 @@ public class HomeDaoImpl implements HomeDao {
 	 * @throws SQLException
 	 */
 	public T_paybank_home insertHome(T_paybank_home home) throws SQLException {
-		return null;
+		sqlMapClient.insert("insertHome",home);
+		return home;
 	}
 
 	/**
@@ -26,8 +38,8 @@ public class HomeDaoImpl implements HomeDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean updateHome(T_paybank_home home) throws SQLException {
-		return false;
+	public Integer updateHome(T_paybank_home home) throws SQLException {
+		return sqlMapClient.update("updateHome",home);
 	}
 
 	/**
@@ -37,8 +49,8 @@ public class HomeDaoImpl implements HomeDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean deleteHome(T_paybank_home home) throws SQLException {
-		return false;
+	public Integer deleteHome(T_paybank_home home) throws SQLException {
+		return sqlMapClient.delete("deleteHome",home);
 	}
 
 	/**
@@ -50,7 +62,8 @@ public class HomeDaoImpl implements HomeDao {
 	 */
 	public T_paybank_home_all insertHomeUser(T_paybank_home_all all)
 			throws SQLException {
-		return null;
+		sqlMapClient.insert("insertHomeUser",all);
+		return all;
 	}
 
 	/**
@@ -60,8 +73,8 @@ public class HomeDaoImpl implements HomeDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean updateHomeUser(T_paybank_home_all all) throws SQLException {
-		return false;
+	public Integer updateHomeUser(T_paybank_home_all all) throws SQLException {
+		return sqlMapClient.update("updateHomeUser",all);
 	}
 
 	/**
@@ -71,8 +84,8 @@ public class HomeDaoImpl implements HomeDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean deleteHomeUser(T_paybank_home_all all) throws SQLException {
-		return false;
+	public Integer deleteHomeUser(T_paybank_home_all all) throws SQLException {
+		return sqlMapClient.delete("deleteHomeUser",all);
 	}
 
 	/**
@@ -83,7 +96,7 @@ public class HomeDaoImpl implements HomeDao {
 	 * @throws SQLException
 	 */
 	public T_paybank_home getHomeInfo(T_paybank_home all) throws SQLException {
-		return null;
+		return (T_paybank_home) sqlMapClient.queryForObject("getHomeInfo",all);
 	}
 
 	/**
@@ -95,6 +108,6 @@ public class HomeDaoImpl implements HomeDao {
 	 */
 	public List<T_paybank_home_all> getAllHomeUser(T_paybank_home_all all)
 			throws SQLException {
-		return null;
+		return sqlMapClient.queryForList("getAllHomeUser",all);
 	}
 }
