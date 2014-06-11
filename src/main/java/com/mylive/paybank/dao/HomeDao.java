@@ -8,8 +8,9 @@ import com.mylive.paybank.module.T_paybank_home_all;
 
 /**
  * 管理家庭成员
+ * 
  * @author talkxin
- *
+ * 
  */
 public interface HomeDao {
 	/**
@@ -28,6 +29,7 @@ public interface HomeDao {
 	 * @return
 	 * @throws SQLException
 	 */
+	@Deprecated
 	public Integer updateHome(T_paybank_home home) throws SQLException;
 
 	/**
@@ -46,7 +48,7 @@ public interface HomeDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public T_paybank_home_all insertHomeUser(T_paybank_home_all all)
+	public void insertHomeUser(T_paybank_home_all all)
 			throws SQLException;
 
 	/**
@@ -66,20 +68,23 @@ public interface HomeDao {
 	 * @throws SQLException
 	 */
 	public Integer deleteHomeUser(T_paybank_home_all all) throws SQLException;
-	
+
 	/**
 	 * 获取家庭创建信息
+	 * 
 	 * @param all
 	 * @return
 	 * @throws SQLException
 	 */
-	public T_paybank_home getHomeInfo(T_paybank_home all)throws SQLException;
-	
+	public T_paybank_home getHomeInfo(T_paybank_home all) throws SQLException;
+
 	/**
 	 * 获取家庭成员
+	 * 
 	 * @param all
 	 * @return
 	 * @throws SQLException
 	 */
-	public List<T_paybank_home_all> getAllHomeUser(T_paybank_home_all all)throws SQLException;
+	public List<T_paybank_home_all> getAllHomeUser(T_paybank_home_all all)
+			throws SQLException;
 }

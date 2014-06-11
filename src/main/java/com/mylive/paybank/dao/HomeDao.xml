@@ -3,5 +3,44 @@
     PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
     "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 <sqlMap>
+	<typeAlias alias="long" type="java.lang.Long" />
+	<typeAlias alias="hsahmap" type="java.util.HashMap" />
+	<typeAlias alias="string" type="java.lang.String" />
+	<typeAlias alias="int" type="java.lang.Integer" />
+	<typeAlias alias="home" type="com.mylive.paybank.module.T_paybank_home" />
+	<typeAlias alias="homeall"
+		type="com.mylive.paybank.module.T_paybank_home_all" />
+	<insert id="insertHome" parameterClass="home">
+		insert into T_paybank_home(foundID) values(#foundID#)
+		<selectKey resultClass="int" keyProperty="id">
+			SELECT @@IDENTITY
+			AS id
+		</selectKey>
+	</insert>
+	<delete id="deleteHome" parameterClass="home">
+		delete from
+		T_paybank_home where id=#id#
+	</delete>
+	<insert id="insertHomeUser" parameterClass="homeall">
+		insert into
+		T_paybank_home_all(homeID,name,uid) values(#homeID#,#name#,#uid#)
+	</insert>
+	<update id="updateHomeUser" parameterClass="homeall">
+		update
+		T_paybank_home_all set homeID=#homeID#,name=#name#,uid=#uid# where
+		id=#id#
+	</update>
+	<delete id="deleteHomeUser" parameterClass="homeall">
+		delete from
+		T_paybank_home_all where id=#id#
+	</delete>
 
+	<select id="getHomeInfo" parameterClass="home" resultClass="home">
+		select * from T_paybank_home where foundID=#foundID#
+	</select>
+
+	<select id="getAllHomeUser" parameterClass="homeall"
+		resultClass="homeall">
+		select * from T_paybank_home_all where homeID=#homeID#
+	</select>
 </sqlMap>

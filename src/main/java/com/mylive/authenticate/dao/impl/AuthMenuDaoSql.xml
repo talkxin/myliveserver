@@ -3,8 +3,7 @@
     PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
     "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 <sqlMap>
-	<typeAlias alias="menu"
-		type="com.mylive.authenticate.model.MenuModel" />
+	<typeAlias alias="menu" type="com.mylive.authenticate.model.MenuModel" />
 	<typeAlias alias="long" type="java.lang.Long" />
 	<typeAlias alias="hsahmap" type="java.util.HashMap" />
 	<typeAlias alias="string" type="java.lang.String" />
@@ -72,7 +71,8 @@
 	</update>
 
 	<delete id="menuModelDelete" parameterClass="long">
-		delete FROM t_auth_menu
+		delete FROM
+		t_auth_menu
 		where menuId=#menuId#
 	</delete>
 </sqlMap>

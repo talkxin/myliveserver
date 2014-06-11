@@ -10,10 +10,66 @@ Target Server Type    : MYSQL
 Target Server Version : 50519
 File Encoding         : 65001
 
-Date: 2014-06-04 11:30:17
+Date: 2014-06-11 10:41:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for t_auth_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `t_auth_menu`;
+CREATE TABLE `t_auth_menu` (
+  `menuId` int(9) NOT NULL AUTO_INCREMENT,
+  `menuTitle` varchar(50) DEFAULT NULL,
+  `menuType` int(1) DEFAULT NULL,
+  `menuDescription` varchar(200) DEFAULT NULL,
+  `menuLink` varchar(500) DEFAULT '#',
+  `menuOperateType` int(1) DEFAULT '1',
+  `menuPsersonScope` int(1) DEFAULT '1',
+  `menuAreaScope` int(1) DEFAULT '1',
+  `menuParentId` int(9) DEFAULT '0',
+  PRIMARY KEY (`menuId`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for t_auth_role
+-- ----------------------------
+DROP TABLE IF EXISTS `t_auth_role`;
+CREATE TABLE `t_auth_role` (
+  `roleId` int(9) NOT NULL AUTO_INCREMENT,
+  `roleTitle` varchar(50) DEFAULT NULL,
+  `roleDescription` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`roleId`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for t_auth_role_vs_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `t_auth_role_vs_menu`;
+CREATE TABLE `t_auth_role_vs_menu` (
+  `id` int(9) NOT NULL AUTO_INCREMENT,
+  `roleId` int(9) DEFAULT '0',
+  `menuId` int(9) DEFAULT NULL,
+  `menuOperateType` int(1) DEFAULT NULL,
+  `menuPersonScope` int(1) DEFAULT NULL,
+  `menuAreaScope` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=226 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for t_auth_user
+-- ----------------------------
+DROP TABLE IF EXISTS `t_auth_user`;
+CREATE TABLE `t_auth_user` (
+  `userId` int(9) NOT NULL AUTO_INCREMENT,
+  `userName` varchar(20) DEFAULT NULL,
+  `loginName` varchar(20) DEFAULT NULL,
+  `password` char(90) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `roleId` int(9) DEFAULT NULL,
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for t_paybank_card
@@ -42,10 +98,11 @@ CREATE TABLE `t_paybank_home` (
 -- ----------------------------
 DROP TABLE IF EXISTS `t_paybank_home_all`;
 CREATE TABLE `t_paybank_home_all` (
-  `homeID` int(19) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `homeID` int(19) DEFAULT NULL,
   `name` varchar(50) DEFAULT NULL,
   `uid` int(19) DEFAULT NULL,
-  PRIMARY KEY (`homeID`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------

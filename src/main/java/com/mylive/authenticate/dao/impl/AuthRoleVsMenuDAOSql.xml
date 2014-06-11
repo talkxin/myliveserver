@@ -40,7 +40,7 @@
 	</select>
 
 	<update id="roleVsMenuModelUpdate" parameterClass="roleVsMenuModel">
-		update 
+		update
 		t_auth_role_vs_menu set roleId=#roleId#, menuId=#menuId#,
 		menuOperateType=#menuOperateType#, menuPersonScope=#menuPersonScope#,
 		menuAreaScope=#menuAreaScope# where id=#id#

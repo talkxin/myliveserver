@@ -24,8 +24,8 @@ public class LoginUserDaoImpl implements LoginUserDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public T_paybank_user regUser(T_paybank_user l) throws SQLException {
-		sqlMapClient.insert("regUser",l);
+	public T_paybank_user regPayUser(T_paybank_user l) throws SQLException {
+		sqlMapClient.insert("regPayUser", l);
 		return l;
 	}
 
@@ -36,8 +36,15 @@ public class LoginUserDaoImpl implements LoginUserDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public T_paybank_user loginUser(T_paybank_user l) throws SQLException {
-		return (T_paybank_user) sqlMapClient.queryForObject("loginUser",l);
+	public T_paybank_user payLoginUser(T_paybank_user l, Integer type)
+			throws SQLException {
+		if (type == 1)
+			return (T_paybank_user) sqlMapClient.queryForObject("loginUser", l);
+		else if (type == 2)
+			return (T_paybank_user) sqlMapClient.queryForObject(
+					"selectpayuser", l);
+		else
+			return null;
 	}
 
 	/**
@@ -48,6 +55,6 @@ public class LoginUserDaoImpl implements LoginUserDao {
 	 * @throws SQLException
 	 */
 	public Integer updateLoginUser(T_paybank_user l) throws SQLException {
-		return sqlMapClient.update("updateLoginUser",l);
+		return sqlMapClient.update("updateLoginUser", l);
 	}
 }

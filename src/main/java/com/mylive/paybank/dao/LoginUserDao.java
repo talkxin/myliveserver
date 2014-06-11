@@ -18,7 +18,7 @@ public interface LoginUserDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public T_paybank_user regUser(T_paybank_user l) throws SQLException;
+	public T_paybank_user regPayUser(T_paybank_user l) throws SQLException;
 
 	/**
 	 * 用户登录
@@ -27,7 +27,7 @@ public interface LoginUserDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public T_paybank_user loginUser(T_paybank_user l) throws SQLException;
+	public T_paybank_user payLoginUser(T_paybank_user l,Integer type) throws SQLException;
 
 	/**
 	 * 修改用户

@@ -27,7 +27,7 @@ public class HomeDaoImpl implements HomeDao {
 	 * @throws SQLException
 	 */
 	public T_paybank_home insertHome(T_paybank_home home) throws SQLException {
-		sqlMapClient.insert("insertHome",home);
+		sqlMapClient.insert("insertHome", home);
 		return home;
 	}
 
@@ -39,7 +39,7 @@ public class HomeDaoImpl implements HomeDao {
 	 * @throws SQLException
 	 */
 	public Integer updateHome(T_paybank_home home) throws SQLException {
-		return sqlMapClient.update("updateHome",home);
+		return sqlMapClient.update("updateHome", home);
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class HomeDaoImpl implements HomeDao {
 	 * @throws SQLException
 	 */
 	public Integer deleteHome(T_paybank_home home) throws SQLException {
-		return sqlMapClient.delete("deleteHome",home);
+		return sqlMapClient.delete("deleteHome", home);
 	}
 
 	/**
@@ -60,10 +60,8 @@ public class HomeDaoImpl implements HomeDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public T_paybank_home_all insertHomeUser(T_paybank_home_all all)
-			throws SQLException {
-		sqlMapClient.insert("insertHomeUser",all);
-		return all;
+	public void insertHomeUser(T_paybank_home_all all) throws SQLException {
+		sqlMapClient.insert("insertHomeUser", all);
 	}
 
 	/**
@@ -74,7 +72,7 @@ public class HomeDaoImpl implements HomeDao {
 	 * @throws SQLException
 	 */
 	public Integer updateHomeUser(T_paybank_home_all all) throws SQLException {
-		return sqlMapClient.update("updateHomeUser",all);
+		return sqlMapClient.update("updateHomeUser", all);
 	}
 
 	/**
@@ -85,7 +83,7 @@ public class HomeDaoImpl implements HomeDao {
 	 * @throws SQLException
 	 */
 	public Integer deleteHomeUser(T_paybank_home_all all) throws SQLException {
-		return sqlMapClient.delete("deleteHomeUser",all);
+		return sqlMapClient.delete("deleteHomeUser", all);
 	}
 
 	/**
@@ -96,7 +94,7 @@ public class HomeDaoImpl implements HomeDao {
 	 * @throws SQLException
 	 */
 	public T_paybank_home getHomeInfo(T_paybank_home all) throws SQLException {
-		return (T_paybank_home) sqlMapClient.queryForObject("getHomeInfo",all);
+		return (T_paybank_home) sqlMapClient.queryForObject("getHomeInfo", all);
 	}
 
 	/**
@@ -108,6 +106,6 @@ public class HomeDaoImpl implements HomeDao {
 	 */
 	public List<T_paybank_home_all> getAllHomeUser(T_paybank_home_all all)
 			throws SQLException {
-		return sqlMapClient.queryForList("getAllHomeUser",all);
+		return sqlMapClient.queryForList("getAllHomeUser", all);
 	}
 }

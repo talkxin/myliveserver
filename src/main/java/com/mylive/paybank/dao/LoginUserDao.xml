@@ -3,5 +3,33 @@
     PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
     "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 <sqlMap>
+	<typeAlias alias="long" type="java.lang.Long" />
+	<typeAlias alias="hsahmap" type="java.util.HashMap" />
+	<typeAlias alias="string" type="java.lang.String" />
+	<typeAlias alias="int" type="java.lang.Integer" />
+	<typeAlias alias="payuser" type="com.mylive.paybank.module.T_paybank_user" />
 
+	<insert id="regPayUser" parameterClass="payuser">
+		insert into
+		T_paybank_user(loginname,password)
+		values(#loginname#,#password#)
+		<selectKey resultClass="int" keyProperty="uid">
+			SELECT @@IDENTITY
+			AS uid
+		</selectKey>
+	</insert>
+
+	<update id="updateLoginUser" parameterClass="payuser">
+		update
+		T_paybank_user set password=#password# where uid=#uid#
+	</update>
+
+	<select id="payLoginUser" parameterClass="payuser" resultClass="payuser">
+		select * from T_paybank_user where loginname=#loginname# and
+		password=#password#
+	</select>
+
+	<select id="selectpayuser" parameterClass="payuser" resultClass="payuser">
+		select * from T_paybank_user where loginname=#loginname#
+	</select>
 </sqlMap>
