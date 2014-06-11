@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap>
+	<typeAlias alias="long" type="java.lang.Long" />
+	<typeAlias alias="hsahmap" type="java.util.HashMap" />
+	<typeAlias alias="string" type="java.lang.String" />
+	<typeAlias alias="int" type="java.lang.Integer" />
+	<typeAlias alias="paycard" type="com.mylive.paybank.module.T_paybank_card" />
+	<insert id="insertPayCard" parameterClass="paycard">
+		insert into T_paybank_card(uid,homeID,cardNo,name)
+		values(#uid#,#homeID#,#cardNo#,#name#)
+		<selectKey resultClass="int" keyProperty="id">
+			SELECT @@IDENTITY
+			AS id
+		</selectKey>
+	</insert>
+	<update id="updatePayCard" parameterClass="paycard">
+		update T_paybank_card
+		set uid=#uid#,homeID=#homeID#,cardNo=#cardNo#,name=#name# where
+		id=#id#
+	</update>
+	<delete id="deletePayCard" parameterClass="paycard">
+		delete from
+		T_paybank_card where id=#id#
+	</delete>
+	<select id="getOneCard" parameterClass="paycard" resultClass="paycard">
+		select * from T_paybank_card where id=#id#
+	</select>
+	<select id="getCardList" parameterClass="paycard" resultClass="paycard">
+		select * from T_paybank_card where 1=1
+		<isNotNull prepend="and" property="homeID">
+			homeID=#homeID#
+		</isNotNull>
+		<isNotNull prepend="and" property="uid">
+			uid=#uid#
+		</isNotNull>
+	</select>
+</sqlMap>
