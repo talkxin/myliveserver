@@ -10,7 +10,7 @@ import com.mylive.paybank.module.T_paybank_user;
  * @author talkxin
  * 
  */
-public interface LoginUserDao {
+public interface LoginPayUserDao {
 	/**
 	 * 注册用户
 	 * 

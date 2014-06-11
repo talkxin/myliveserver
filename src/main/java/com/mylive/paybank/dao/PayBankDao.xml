@@ -7,5 +7,56 @@
 	<typeAlias alias="hsahmap" type="java.util.HashMap" />
 	<typeAlias alias="string" type="java.lang.String" />
 	<typeAlias alias="int" type="java.lang.Integer" />
-	<typeAlias alias="payuser" type="com.mylive.paybank.module.T_paybank_user" />
+	<typeAlias alias="zhichu"
+		type="com.mylive.paybank.module.T_paybank_zhichutype" />
+	<typeAlias alias="shouzhi"
+		type="com.mylive.paybank.module.T_paybank_shouzhi" />
+	<insert id="insertZhichu" parameterClass="zhichu">
+		insert into
+		T_paybank_zhichutype(homeID,name) values(#homeID#,#name#)
+		<selectKey resultClass="int" keyProperty="id">
+			SELECT @@IDENTITY
+			AS id
+		</selectKey>
+	</insert>
+	<update id="updateZhichu" parameterClass="zhichu">
+		update
+		T_paybank_zhichutype set homeID=#homeID#,name=#name# where id=#id#
+	</update>
+
+	<delete id="deleteZhichu" parameterClass="zhichu">
+		delete from
+		T_paybank_zhichutype where id=#id#
+	</delete>
+
+	<insert id="insertShouzhi" parameterClass="shouzhi">
+		insert into
+		T_paybank_shouzhi(uid,homeID,time,type,money,paymode,cardName,applyto,note,datajson)
+		values(#uid#,#homeID#,#time#,#type#,#money#,#paymode#,#cardName#,#applyto#,#note#,#datajson#)
+		<selectKey resultClass="int" keyProperty="id">
+			SELECT @@IDENTITY
+			AS id
+		</selectKey>
+	</insert>
+
+	<update id="updateShouzhi" parameterClass="shouzhi">
+		update
+		T_paybank_shouzhi set
+		uid=#uid#,home=#home#,time=#time#,type=#type#,money=#money#,paymode=#paymode#,cardName=#cardName#,applyto=#applyto#,note=#note#,datajson=#datajson#
+		where id=#id#
+	</update>
+	<delete id="deleteShouzhi" parameterClass="shouzhi">
+		delete from
+		T_paybank_shouzhi where id=#id#
+	</delete>
+	<select id="getOneShouzhi" parameterClass="shouzhi" resultClass="shouzhi">
+		select * from T_paybank_shouzhi where id=#id#
+	</select>
+	
+	<select id="getShouzhiList" parameterClass="shouzhi" resultClass="shouzhi">
+		select * from T_paybank_shouzhi where homeID=#homeID#
+		<isNotNull property="time" prepend="and">
+			time like '%'||#time#||'%'   
+		</isNotNull>
+	</select>
 </sqlMap>

@@ -3,6 +3,7 @@ package com.mylive.paybank.module;
 public class T_paybank_shouzhi {
 	private Integer id;
 	private Integer uid;
+	private Integer homeID;
 	private String time;
 	private Integer type;
 	private String money;
@@ -11,6 +12,14 @@ public class T_paybank_shouzhi {
 	private Integer applyto;
 	private String note;
 	private String datajson;
+
+	public Integer getHomeID() {
+		return homeID;
+	}
+
+	public void setHomeID(Integer homeID) {
+		this.homeID = homeID;
+	}
 
 	public Integer getId() {
 		return id;

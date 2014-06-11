@@ -3,10 +3,10 @@ package com.mylive.paybank.dao.impl;
 import java.sql.SQLException;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
-import com.mylive.paybank.dao.LoginUserDao;
+import com.mylive.paybank.dao.LoginPayUserDao;
 import com.mylive.paybank.module.T_paybank_user;
 
-public class LoginUserDaoImpl implements LoginUserDao {
+public class LoginPayUserDaoImpl implements LoginPayUserDao {
 	private SqlMapClient sqlMapClient;
 
 	public SqlMapClient getSqlMapClient() {
