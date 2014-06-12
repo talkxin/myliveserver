@@ -42,7 +42,7 @@
 	<update id="updateShouzhi" parameterClass="shouzhi">
 		update
 		T_paybank_shouzhi set
-		uid=#uid#,home=#home#,time=#time#,type=#type#,money=#money#,paymode=#paymode#,cardName=#cardName#,applyto=#applyto#,note=#note#,datajson=#datajson#
+		uid=#uid#,homeID=#homeID#,time=#time#,type=#type#,money=#money#,paymode=#paymode#,cardName=#cardName#,applyto=#applyto#,note=#note#,datajson=#datajson#
 		where id=#id#
 	</update>
 	<delete id="deleteShouzhi" parameterClass="shouzhi">
