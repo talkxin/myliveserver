@@ -10,4 +10,11 @@
 	<sqlMap resource="/com/mylive/authenticate/dao/impl/AuthRoleDAOSql.xml" />
 	<sqlMap resource="/com/mylive/authenticate/dao/impl/AuthRoleVsMenuDAOSql.xml" />
 	<sqlMap resource="/com/mylive/authenticate/dao/impl/AuthUserDAOSql.xml" />
+	
+	<!-- 业务 -->
+	<!-- 记账 -->
+	<sqlMap resource="/com/mylive/paybank/dao/HomeCardDao.xml" />
+	<sqlMap resource="/com/mylive/paybank/dao/HomeDao.xml" />
+	<sqlMap resource="/com/mylive/paybank/dao/LoginUserDao.xml" />
+	<sqlMap resource="/com/mylive/paybank/dao/PayBankDao.xml" />
 </sqlMapConfig>

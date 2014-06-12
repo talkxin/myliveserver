@@ -18,24 +18,27 @@ http://www.springframework.org/schema/task
 http://www.springframework.org/schema/task/spring-task-3.0.xsd
 http://www.springframework.org/schema/jdbc
  http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
-	<!-- 记账dao/bo -->
-	<bean id="homeCardDao" class="com.mylive.paybank.dao.impl.HomeCardDaoImpl">
-		<property name="sqlMapClient" ref="sqlMapClient"></property>
-	</bean>
-	<bean id="homeDao" class="com.mylive.paybank.dao.impl.HomeDaoImpl">
-		<property name="sqlMapClient" ref="sqlMapClient"></property>
-	</bean>
-	<bean id="loginPayUserDao" class="com.mylive.paybank.dao.impl.LoginPayUserDaoImpl">
-		<property name="sqlMapClient" ref="sqlMapClient"></property>
-	</bean>
-	<bean id="payBankDao" class="com.mylive.paybank.dao.impl.PayBankDaoImpl">
+	<!-- 权限层 -->
+	<bean id="authenticateDao" class="com.mylive.authenticate.dao.impl.AuthMenuDAOImpl">
 		<property name="sqlMapClient" ref="sqlMapClient"></property>
 	</bean>
 
-	<bean id="payBankBo" class="com.mylive.paybank.bo.impl.PayBankBoImpl">
-		<property name="homeCardDao" ref="homeCardDao"></property>
-		<property name="homeDao" ref="homeDao"></property>
-		<property name="loginPayUserDao" ref="loginPayUserDao"></property>
-		<property name="payBankDao" ref="payBankDao"></property>
+	<bean id="authRoleDao" class="com.mylive.authenticate.dao.impl.AuthRoleDAOImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"></property>
+	</bean>
+
+	<bean id="authRoleVsMenuDao" class="com.mylive.authenticate.dao.impl.AuthRoleVsMenuDAOImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"></property>
+	</bean>
+
+	<bean id="userDao" class="com.mylive.authenticate.dao.impl.AuthUserDAOImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"></property>
+	</bean>
+
+	<bean id="authenticateBo" class="com.mylive.authenticate.bo.impl.AuthenticateBOImpl">
+		<property name="authenticateDao" ref="authenticateDao"></property>
+		<property name="authRoleDao" ref="authRoleDao"></property>
+		<property name="authRoleVsMenuDao" ref="authRoleVsMenuDao"></property>
+		<property name="userDao" ref="userDao"></property>
 	</bean>
 </beans>
