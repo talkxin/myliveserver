@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-json" extends="json-default">
+		<action name="regPayUser" method="regPayUser"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="payLoginUser" method="payLoginUser"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="updateLoginUser" method="updateLoginUser"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="insertPayCard" method="insertPayCard"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="updatePayCard" method="updatePayCard"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="deletePayCard" method="deletePayCard"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="getOneCard" method="getOneCard"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="getCardList" method="getCardList"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="insertHome" method="insertHome"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="deleteHome" method="deleteHome"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="insertHomeUser" method="insertHomeUser"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="updateHomeUser" method="updateHomeUser"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="deleteHomeUser" method="deleteHomeUser"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="getHomeInfo" method="getHomeInfo"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="getAllHomeUser" method="getAllHomeUser"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="insertZhichu" method="insertZhichu"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="updateZhichu" method="updateZhichu"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="deleteZhichu" method="deleteZhichu"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="insertShouzhi" method="insertShouzhi"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="updateShouzhi" method="updateShouzhi"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="deleteShouzhi" method="deleteShouzhi"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="getOneShouzhi" method="getOneShouzhi"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="getShouzhiList" method="getShouzhiList"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+		<action name="getZhichuList" method="getZhichuList"
+			class="com.mylive.paybank.action.PayBankAction">
+			<result type="json" name="success">
+				<param name="root">appVersion</param>
+			</result>
+		</action>
+
+	</package>
+</struts>
