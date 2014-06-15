@@ -52,11 +52,16 @@
 	<select id="getOneShouzhi" parameterClass="shouzhi" resultClass="shouzhi">
 		select * from T_paybank_shouzhi where id=#id#
 	</select>
-	
-	<select id="getShouzhiList" parameterClass="shouzhi" resultClass="shouzhi">
+
+	<select id="getShouzhiList" parameterClass="shouzhi"
+		resultClass="shouzhi">
 		select * from T_paybank_shouzhi where homeID=#homeID#
 		<isNotNull property="time" prepend="and">
-			time like '%'||#time#||'%'   
+			time like
+			'%'||#time#||'%'
 		</isNotNull>
+	</select>
+	<select id="getZhichuList" parameterClass="zhichu" resultClass="zhichu">
+		select * from T_paybank_zhichutype where homeID=#homeID#
 	</select>
 </sqlMap>

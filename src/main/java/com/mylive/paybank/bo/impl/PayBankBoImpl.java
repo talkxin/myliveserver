@@ -278,6 +278,18 @@ public class PayBankBoImpl implements PayBankBo {
 		return payBankDao.getShouzhiList(t);
 	}
 
+	/**
+	 * 获取所有支出项
+	 * 
+	 * @param t
+	 * @return
+	 * @throws SQLException
+	 */
+	public List<T_paybank_zhichutype> getZhichuList(T_paybank_zhichutype t)
+			throws SQLException {
+		return payBankDao.getZhichuList(t);
+	}
+
 	public HomeCardDao getHomeCardDao() {
 		return homeCardDao;
 	}

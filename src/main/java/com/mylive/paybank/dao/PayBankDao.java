@@ -84,4 +84,14 @@ public interface PayBankDao {
 	 */
 	public List<T_paybank_shouzhi> getShouzhiList(T_paybank_shouzhi t)
 			throws SQLException;
+
+	/**
+	 * 获取所有支出项
+	 * 
+	 * @param t
+	 * @return
+	 * @throws SQLException
+	 */
+	public List<T_paybank_zhichutype> getZhichuList(T_paybank_zhichutype t)
+			throws SQLException;
 }

@@ -35,6 +35,11 @@
 		T_paybank_home_all where id=#id#
 	</delete>
 
+	<delete id="deleteHomeUser2" parameterClass="homeall">
+		delete from
+		T_paybank_home_all where homeID=#homeID#
+	</delete>
+
 	<select id="getHomeInfo" parameterClass="home" resultClass="home">
 		select * from T_paybank_home where foundID=#foundID#
 	</select>

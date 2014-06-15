@@ -50,7 +50,12 @@ public class HomeDaoImpl implements HomeDao {
 	 * @throws SQLException
 	 */
 	public Integer deleteHome(T_paybank_home home) throws SQLException {
-		return sqlMapClient.delete("deleteHome", home);
+		T_paybank_home_all all = new T_paybank_home_all();
+		all.setHomeID(home.getId());
+		int i = sqlMapClient.delete("deleteHome", home);
+		if (i > 0)
+			sqlMapClient.delete("deleteHomeUser2", all);
+		return i;
 	}
 
 	/**
