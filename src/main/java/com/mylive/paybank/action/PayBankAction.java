@@ -519,7 +519,7 @@ public class PayBankAction extends BaseAction {
 	}
 
 	/**
-	 * 获取所有支出类型
+	 * 获取所有支出
 	 * 
 	 * @return
 	 */
